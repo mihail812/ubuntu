@@ -5,7 +5,8 @@
 #
 
 # Pull base image.
-FROM ubuntu:14.04
+FROM ubuntu:15.10
+MAINTAINER Mihail Raichenko
 
 # Install.
 RUN \
@@ -14,7 +15,9 @@ RUN \
   apt-get -y upgrade && \
   apt-get install -y build-essential && \
   apt-get install -y software-properties-common && \
-  apt-get install -y byobu curl git htop man unzip vim wget && \
+  apt-get install -y byobu curl git htop man unzip vim wget golang python2.7 g++ libboost-dev cmake \
+  mysql-client mongodb-clients libmongo-client-dev libmysqlclient-dev\
+  libatlas-base-dev libsvm-dev vowpal-wabbit python-numpy python-pandas python-scikits-learn ipython-notebook && \
   rm -rf /var/lib/apt/lists/*
 
 # Add files.
