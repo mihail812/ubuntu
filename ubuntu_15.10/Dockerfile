@@ -17,7 +17,7 @@ RUN \
   apt-get install -y software-properties-common && \
   apt-get install -y byobu curl git htop man unzip vim wget golang python2.7 g++ libboost-dev cmake \
   mysql-client mongodb-clients libmongo-client-dev libmysqlclient-dev\
-  libatlas-base-dev libsvm-dev vowpal-wabbit python-numpy python-pandas python-scikits-learn ipython-notebook && \
+  libatlas-base-dev libsvm-dev libsvm-tools libsvm3 vowpal-wabbit python-numpy python-pandas python-scikits-learn ipython-notebook && \
   rm -rf /var/lib/apt/lists/*
 
 # Add files.
